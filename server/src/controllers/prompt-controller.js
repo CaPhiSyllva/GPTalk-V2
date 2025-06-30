@@ -14,14 +14,14 @@ export default {
 
     try {
       const response = await openai.chat.completions.create({
-        model: "gpt-4.1",  // Modelo atualizado
+        model: "gpt-4.1", 
         messages: [{ 
           role: "user", 
           content: prompt 
         }],
         temperature: 0.7,
         max_tokens: 1000,
-        // Remova o response_format se não for necessário
+    
       });
 
       return res.status(200).json({
@@ -35,7 +35,7 @@ export default {
       let statusCode = 500;
       let errorMessage = "Erro interno no servidor";
       
-      // Tratamento mais completo de erros
+      // Tratamento de erros
       if (error.status === 429) {
         statusCode = 429;
         errorMessage = "Limite de requisições excedido. Tente novamente mais tarde.";
