@@ -37,9 +37,6 @@ Este projeto entrega uma aplicação web full-stack que integra a API do ChatGPT
 ├── package.json # Dependências e scripts do backend
 └── README.md # Este arquivo
 
-markdown
-Copiar
-Editar
 
 ## Como Rodar o Projeto
 
