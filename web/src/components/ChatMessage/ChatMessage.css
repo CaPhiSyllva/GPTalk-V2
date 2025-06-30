@@ -1,0 +1,97 @@
+/* Cores da Refrio */
+:root {
+  --azul-marinho: #000080;
+  --azul-marinho-escuro: #00005c;
+  --branco: #ffffff;
+  --branco-acinzentado: #f8f8f8;
+  --cinza-claro: #e0e0e0;
+  --texto-escuro: #333333;
+  --texto-claro: #666666;
+}
+
+/* Container principal da mensagem */
+.chat-message {
+  padding: 16px 0;
+  margin-bottom: 16px;
+  position: relative;
+  background-color: var(--branco);
+}
+
+/* Mensagens do ChatGPT */
+.chat-message.chatgpt {
+  background-color: var(--branco-acinzentado);
+  border-left: 3px solid var(--azul-marinho);
+}
+
+/* Container central - responsivo */
+.chat-message-center {
+  max-width: min(640px, 90%);
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  padding: 12px 24px;
+}
+
+/* Conteúdo da mensagem */
+.message {
+  flex: 1;
+  padding: 0 16px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: var(--texto-escuro);
+}
+
+/* Avatar - estilização melhorada */
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: var(--branco);
+  font-weight: bold;
+}
+
+.avatar.chatgpt {
+  background-color: var(--azul-marinho);
+}
+
+/* Estilo para mensagens do usuário */
+.chat-message:not(.chatgpt) {
+  border-left: 3px solid var(--cinza-claro);
+}
+
+.avatar.user {
+  background-color: var(--cinza-claro);
+  color: var(--texto-escuro);
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .chat-message-center {
+    padding: 10px 16px;
+    max-width: 95%;
+  }
+  
+  .message {
+    padding: 0 10px;
+    font-size: 0.95rem;
+  }
+  
+  .avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Ícones SVG */
+.avatar svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
